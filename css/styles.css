@@ -2,10 +2,12 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0px;
+  background-color: #f2f4fc;
 }
 
 #container {
-  background-color: #f2f4fc;
+  position: relative;
 }
 
 #logo {
@@ -14,7 +16,7 @@ body {
 }
 
 navbar {
-  height: 120px;
+  padding-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -27,6 +29,8 @@ navbar #navbar-links {
   justify-content: space-between;
   width: 300px;
   margin-bottom: 15px;
+  list-style: none;
+  cursor: pointer;
 }
 
 navbar a {
@@ -38,14 +42,13 @@ header {
   margin-top: 100px;
   margin-left: 170px;
   margin-right: 170px;
-  height: 650px;
   display: flex;
   margin-bottom: 130px;
 }
 
 .header-image {
   background-image: url("../assets/hero-image.png");
-  height: 100%;
+  height: 650px;
   width: 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -83,16 +86,14 @@ header {
 }
 
 .header-card1 {
-  width: 50vh;
-  height: auto;
+  width: 370px;
   position: absolute;
   top: -25px;
   left: -85px;
 }
 
 .header-card2 {
-  width: 45vh;
-  height: auto;
+  width: 340px;
   position: absolute;
   bottom: -100px;
   left: 300px;
@@ -105,17 +106,290 @@ header {
 }
 
 #logos {
-  margin-left: 170px;
-  margin-right: 170px;
+  margin: 0px 170px 150px;
   display: flex;
   justify-content: space-between;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
 
+#menu {
+  width: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: none;
+}
+
 @media screen and (max-width: 576px) {
-  body {
-    background-color: blue;
+  #menu {
+    display: block;
+  }
+
+  navbar button {
+    display: none;
   }
 }
--
+
+#projects-section,
+#services-section {
+  margin: 0px 170px 200px;
+}
+
+.section-title {
+  color: #292e47;
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-card {
+  background-color: white;
+  box-shadow: 0px 10px 55px 20px rgba(0, 0, 0, 0.05);
+  width: 31%;
+}
+
+.card-text {
+  padding: 8px 30px 25px 30px;
+}
+
+.card-text h2 {
+  color: #292e47;
+}
+
+.card-text p {
+  color: #6b708d;
+}
+
+.card-text a {
+  text-decoration: none;
+}
+
+#projects-section .section-card img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+#client-section {
+  background-color: #292e47;
+  background-image: url("../assets/orbit.png");
+  background-size: cover;
+  height: 600px;
+  margin: 0px 56px 200px;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "img1 heading img2"
+    ". quote ."
+    "img3 profile img4";
+}
+
+#client-section h2 {
+  color: #ffff;
+  font-size: 40px;
+  grid-area: heading;
+  align-self: end;
+  justify-self: center;
+}
+
+#client-section h3 {
+  color: #ffc600;
+  font-size: 22px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 500;
+  grid-area: quote;
+  align-self: center;
+  justify-self: center;
+}
+
+.memoji-1 {
+  grid-area: img1;
+  width: 50%;
+  justify-self: center;
+  align-self: end;
+}
+
+.memoji-2 {
+  grid-area: img2;
+  width: 50%;
+  justify-self: center;
+  align-self: end;
+}
+
+.memoji-3 {
+  grid-area: img3;
+  width: 50%;
+  justify-self: center;
+  align-self: top;
+}
+
+.memoji-4 {
+  grid-area: img4;
+  width: 50%;
+  justify-self: center;
+  align-self: top;
+}
+
+.profile {
+  grid-area: profile;
+  justify-self: center;
+  align-self: top;
+  display: flex;
+}
+
+.profile img {
+  clip-path: circle();
+  height: 50px;
+  margin-right: 10px;
+}
+
+.profile-text h4 {
+  color: #a2d6f9;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.profile-text h5 {
+  color: #ffff;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.serv-img-pen {
+  border-radius: 50%;
+  background: url(../assets/pen.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  height: 80px;
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: #ecf7ff;
+}
+
+.serv-img-cursor {
+  border-radius: 50%;
+  background: url(../assets/cursor.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  height: 80px;
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: #ecf7ff;
+}
+
+.serv-img-document {
+  border-radius: 50%;
+  background: url(../assets/document.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  height: 80px;
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: #ecf7ff;
+}
+
+#questions-section {
+  background-color: #ffc600;
+  height: 500px;
+  margin: 0px 56px 200px;
+}
+
+#questions-section input {
+  height: 60px;
+}
+
+#questions-section button {
+  color: #ffff;
+  background-color: #072ac8;
+  height: 60px;
+  padding: 16px 36px;
+  font-size: 17px;
+  border: solid 2px #072ac8;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.questions-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.questions-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questions-text h3 {
+  color: #292e47;
+}
+
+footer {
+  margin: 0px 170px 150px;
+  color: #6b708d;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer img {
+  width: 100px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "team services about"
+    "press projects privacy";
+}
+
+.team {
+  grid-area: team;
+  justify-self: center;
+  align-self: center;
+}
+.services {
+  grid-area: services;
+  justify-self: center;
+  align-self: center;
+}
+
+.about {
+  grid-area: about;
+  justify-self: center;
+  align-self: center;
+}
+.press {
+  grid-area: press;
+  justify-self: center;
+  align-self: center;
+}
+.projects {
+  grid-area: projects;
+  justify-self: center;
+  align-self: center;
+}
+.privacy {
+  grid-area: privacy;
+  justify-self: center;
+  align-self: center;
+}

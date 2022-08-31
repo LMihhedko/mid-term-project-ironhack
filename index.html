@@ -1,45 +1,174 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Mid Term Project</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/styles.css'>
-    <script src='./js/index.js'></script>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/styles.css"
+    />
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
     <div id="container">
-    <div id="header-container">
+      <div id="header-container">
         <navbar>
-            <img id="logo" src="./assets/circle.svg"/>
-           <div id="navbar-links">
-            <a>Home</a>
-            <a>Projects</a>
-            <a>Services</a>
-           </div> 
-           <button class="header-button">Contact Us</button> 
+          <img id="logo" src="./assets/circle.svg" />
+          <ul id="navbar-links">
+            <li><a>Home</a></li>
+            <li><a>Projects</a></li>
+            <li><a>Services</a></li>
+          </ul>
+          <button class="header-button">Contact Us</button>
         </navbar>
         <header>
+          <img id="menu" src="assets/nav-menu.png" />
           <div class="header-text">
-            <h1 class="header-title">Empower Your<br>Business With<br>Stunning Design!</h1>
-            <h3 class="header-subtitle">Circle is a digital design and development studio.<br>We design and develop astonishing websites<br>and mobile apps.</h3>
+            <h1 class="header-title">
+              Empower Your<br />Business With<br />Stunning Design!
+            </h1>
+            <h3 class="header-subtitle">
+              Circle is a digital design and development studio.<br />We design
+              and develop astonishing websites<br />and mobile apps.
+            </h3>
             <button class="header-button">Get in touch</button>
             <a class="header-link" href="#">See our work</a>
-          </div>  
+          </div>
           <div class="header-image">
-            <img class="header-card1" src="./assets/card-1.png"/>
-            <img class="header-card2" src="./assets/card-2.png"/>
-          </div>  
+            <img class="header-card1" src="./assets/card-1.png" />
+            <img class="header-card2" src="./assets/card-2.png" />
+          </div>
         </header>
-        <div id ="logos">
-            <img src="./assets/airbnb-logo.svg"/>
-            <img src="./assets/google-logo.svg"/>
-            <img src="./assets/microsoft-logo.svg"/>
-            <img src="./assets/fedex-logo.svg"/>
-            <img src="./assets/amazon-logo.svg"/>
+        <div id="logos">
+          <img src="./assets/airbnb-logo.svg" />
+          <img src="./assets/google-logo.svg" />
+          <img src="./assets/microsoft-logo.svg" />
+          <img src="./assets/fedex-logo.svg" />
+          <img src="./assets/amazon-logo.svg" />
         </div>
+        <section id="projects-section">
+          <h2 class="section-title">Recent Projects</h2>
+          <div class="card-container">
+            <div class="section-card">
+              <img src="./assets/1.jpg" />
+              <div class="card-text">
+                <h2>Simplify</h2>
+                <p>UI Design & App Development</p>
+                <br /><br />
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="section-card">
+              <img src="./assets/2.jpg" />
+              <div class="card-text">
+                <h2>Dashcoin</h2>
+                <p>Web Development</p>
+                <br /><br />
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="section-card">
+              <img src="./assets/3.jpg" />
+              <div class="card-text">
+                <h2>Vectorify</h2>
+                <p>User Experience Design</p>
+                <br /><br />
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="client-section">
+          <h2>Hear What Our Clients Have to Say</h2>
+          <h3>
+            “Circle helped us through every stage of our startup.<br />
+            We really enjoyed working with you.”
+          </h3>
+          <img class="memoji-1" src="./assets/memoji-1.png" />
+          <img class="memoji-2" src="./assets/memoji-2.png" />
+          <img class="memoji-3" src="./assets/memoji-3.png" />
+          <img class="memoji-4" src="./assets/memoji-4.png" />
+          <div class="profile">
+            <img src="./assets/profile.png" />
+            <div class="profile-text">
+              <h4>Kristin Watson</h4>
+              <h5>Booking.com</h5>
+            </div>
+          </div>
+        </section>
+        <section id="services-section">
+          <h2 class="section-title">Our Services</h2>
+          <div class="card-container">
+            <div class="section-card">
+              <div class="serv-img-pen"></div>
+              <div class="card-text">
+                <h2>User Interface Design</h2>
+                <p>
+                  Circle provides you with a stunning user interface design that
+                  is accessible to everyone.
+                </p>
+                <br /><br />
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="section-card">
+              <div class="serv-img-cursor"></div>
+              <div class="card-text">
+                <h2>User Experience Design</h2>
+                <p>
+                  Circle always focuses on delivering the best user experience
+                  to your customers.
+                </p>
+                <br /><br />
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="section-card">
+              <div class="serv-img-document"></div>
+              <div class="card-text">
+                <h2>Application Development</h2>
+                <p>
+                  We develop high-quality mobile and web applications using the
+                  latest technology stack.
+                </p>
+                <br /><br />
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="questions-section">
+          <div class="questions-text">
+            <h2 class="section-title">Do you have any questions?</h2>
+            <h3>Let us help you!</h3>
+          </div>
+          <div class="questions-button">
+            <input type="email" id="email" required />
+            <button>Subscribe</button>
+          </div>
+        </section>
+        <footer>
+          <div class="footer-logo">
+            <img src="./assets/circle.svg" />
+            <p>
+              2972 Westheimer Rd. Santa Ana,<br />
+              Illinois 85486
+            </p>
+          </div>
+          <div class="footer-links">
+            <p class="team">Team</p>
+            <p class="services">Services</p>
+            <p class="about">About Us</p>
+            <p class="press">Press</p>
+            <p class="projects">Projects</p>
+            <p class="privacy">Privacy Policy</p>
+          </div>
+        </footer>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
