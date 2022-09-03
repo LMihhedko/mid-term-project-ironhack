@@ -7,10 +7,6 @@ body {
   background-color: #f2f4fc;
 }
 
-#container {
-  position: relative;
-}
-
 #navbar-logo {
   width: 60px;
   margin-bottom: 15px;
@@ -25,7 +21,7 @@ navbar {
   margin-left: 170px;
 }
 
-navbar #navbar-links {
+navbar #navbar-menu {
   display: flex;
   justify-content: space-between;
   width: 300px;
@@ -37,6 +33,11 @@ navbar #navbar-links {
 navbar a {
   color: #6b708d;
   font-weight: 600;
+  text-decoration: none;
+}
+
+navbar a:hover {
+  color: #072ac8;
 }
 
 header {
@@ -62,9 +63,9 @@ header {
   padding-top: 5%;
 }
 
-.header-title {
+.title {
   color: #292e47;
-  font-weight: 900;
+  text-shadow: 0px 0.5px, 0.5px 0px, 0.5px 0px;
   font-size: 3.75rem;
   line-height: 65px;
 }
@@ -75,6 +76,62 @@ header {
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 40px;
+}
+
+.article-title {
+  color: #292e47;
+  font-size: 3.75rem;
+  margin-bottom: 10px;
+  text-shadow: 0px 0.5px, 0.5px 0px, 0.5px 0px;
+}
+
+.article-subtitle {
+  color: #6b708d;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 80px;
+}
+
+.article-date {
+  font-size: 21px;
+  font-weight: 500;
+  color: #292e47;
+}
+
+.article-date span {
+  color: #6b708d;
+}
+
+.subtitle-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#article-image {
+  background-image: url(../assets/1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+#article-image::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  background-position: center center;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1)) blur(20px);
+  z-index: -1;
+}
+
+article p {
+  color: #6b708d;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .header-button {
@@ -123,8 +180,13 @@ header {
 }
 
 #projects-section,
-#services-section {
+#services-section,
+article {
   margin: 0px 170px 200px;
+}
+
+article {
+  margin: 130px 170px 100px;
 }
 
 .section-title {
@@ -419,6 +481,52 @@ footer img {
   align-self: center;
 }
 
+/*contact*/
+
+form {
+  margin: 150px 175px 150px;
+}
+
+form h1 {
+  margin-bottom: 90px;
+}
+
+label {
+  color: #6b708d;
+  font-size: 1.25rem;
+}
+
+input,
+textarea {
+  background-color: rgba(107, 114, 141, 0.1);
+  display: block;
+  border: none;
+  padding: 27px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.middle-section {
+  display: flex;
+  gap: 5%;
+}
+
+.middle-section .input-container {
+  width: 100%;
+}
+
+.submit-btn {
+  background-color: #072ac8;
+  height: 80px;
+  border: solid 2px #072ac8;
+  color: #ffff;
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 576px) {
   #menu {
     display: block;
@@ -441,8 +549,8 @@ footer img {
     align-items: center;
   }
 
-  navbar #navbar-links {
-    display: flex;
+  navbar #navbar-menu {
+    display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 0;
@@ -450,7 +558,7 @@ footer img {
     margin-bottom: 0;
   }
 
-  navbar #navbar-links li {
+  navbar #navbar-menu li {
     padding: 15px 30px;
     background-color: #ffff;
   }
@@ -578,7 +686,7 @@ footer img {
   footer {
     margin: 0px 0px 0px;
     padding: 30px;
-    height: 500px;
+    height: 300px;
     flex-direction: column;
     justify-content: start;
   }
@@ -596,5 +704,29 @@ footer img {
   .privacy {
     justify-self: flex-start;
     align-self: flex-start;
+  }
+
+  /*project page*/
+  article {
+    margin: 30px 30px;
+  }
+
+  .subtitle-container {
+    flex-direction: column;
+  }
+  .article-subtitle {
+    margin-bottom: 0px;
+  }
+  #article-image {
+    height: 400px;
+    margin-bottom: 0px;
+  }
+
+  /*contact page*/
+  form {
+    margin: 30px 30px;
+  }
+  .middle-section {
+    display: block;
   }
 }

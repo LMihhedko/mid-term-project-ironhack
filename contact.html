@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mid Term Project</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/styles.css"
+    />
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <navbar>
+        <img id="navbar-logo" src="./assets/circle.svg" />
+        <ul id="navbar-menu">
+          <li><a class="menuItem" href="./index.html">Home</a></li>
+          <li><a class="menuItem" href="./project.html">Projects</a></li>
+          <li><a class="menuItem" href="#services-section">Services</a></li>
+        </ul>
+        <button class="header-button">Contact Us</button>
+        <img id="menu" src="assets/nav-menu.png" />
+      </navbar>
+      <form action="#">
+        <h1 class="title">Contact Us</h1>
+        <div class="input-container">
+          <label for="name">Full Name*</label>
+          <input
+            type="name"
+            id="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="middle-section">
+          <div class="input-container">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+          <div class="input-container">
+            <label for="phone">Phone</label>
+            <input
+              type="phone"
+              id="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+        </div>
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+        <input type="submit" value="Submit" class="submit-btn" />
+      </form>
+      <footer>
+        <div class="footer-logo">
+          <img src="./assets/circle.svg" />
+          <p>
+            2972 Westheimer Rd. Santa Ana,<br />
+            Illinois 85486
+          </p>
+        </div>
+        <div class="footer-links">
+          <p class="team">Team</p>
+          <p class="services">Services</p>
+          <p class="about">About Us</p>
+          <p class="press">Press</p>
+          <p class="projects">Projects</p>
+          <p class="privacy">Privacy Policy</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
