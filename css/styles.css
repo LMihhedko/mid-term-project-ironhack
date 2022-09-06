@@ -22,7 +22,6 @@ navbar {
 }
 
 navbar #navbar-menu {
-  display: flex;
   justify-content: space-between;
   width: 300px;
   margin-bottom: 15px;
@@ -38,6 +37,14 @@ navbar a {
 
 navbar a:hover {
   color: #072ac8;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
 
 header {
@@ -141,6 +148,12 @@ article p {
   font-size: 17px;
   border: none;
   cursor: pointer;
+  box-shadow: inset 0 0 0 0 #8294e0;
+  transition: ease-out 0.4s;
+}
+
+.header-button:hover {
+  box-shadow: inset 200px 0 0 0 #685aff;
 }
 
 .header-card1 {
@@ -246,7 +259,7 @@ article {
 
 #client-section h2 {
   color: #ffff;
-  font-size: 40px;
+  font-size: 2.22rem;
   grid-area: heading;
   align-self: end;
   justify-self: center;
@@ -254,7 +267,7 @@ article {
 
 #client-section h3 {
   color: #ffc600;
-  font-size: 22px;
+  font-size: 1.22rem;
   text-align: center;
   line-height: 40px;
   font-weight: 500;
@@ -372,7 +385,7 @@ article {
   height: 80px;
   width: 40%;
   padding: 16px 36px;
-  font-size: 17px;
+  font-size: 0.94rem;
   border: solid 2px #072ac8;
   cursor: pointer;
   margin-left: 20px;
@@ -394,7 +407,7 @@ article {
 .questions-button input {
   height: 78px;
   width: 350px;
-  font-size: 17px;
+  font-size: 0.94rem;
   padding-left: 65px;
   background-color: #f2f4fc;
   border: none;
@@ -416,7 +429,7 @@ article {
 .questions-text h3 {
   color: #292e47;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.11rem;
   margin-top: 10px;
   margin-bottom: 40px;
 }
@@ -430,7 +443,7 @@ footer {
 footer p {
   color: #6b708d;
   line-height: 30px;
-  font-size: 17px;
+  font-size: 0.94rem;
 }
 
 footer img {
@@ -496,14 +509,14 @@ label {
   font-size: 1.25rem;
 }
 
-input,
+form input,
 textarea {
   background-color: rgba(107, 114, 141, 0.1);
   display: block;
   border: none;
   padding: 27px;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
   font-size: 1rem;
@@ -519,12 +532,23 @@ textarea {
   width: 100%;
 }
 
+.input-container {
+  margin-bottom: 40px;
+}
+
 .submit-btn {
+  cursor: pointer;
   background-color: #072ac8;
   height: 80px;
   border: solid 2px #072ac8;
   color: #ffff;
   font-size: 1rem;
+}
+
+#phone-error,
+#message-error {
+  font-size: 1rem;
+  color: red;
 }
 
 @media screen and (max-width: 576px) {
@@ -550,7 +574,6 @@ textarea {
   }
 
   navbar #navbar-menu {
-    display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 0;
@@ -653,7 +676,7 @@ textarea {
   }
 
   #client-section h2 {
-    font-size: 35px;
+    font-size: 1.94rem;
     margin-left: 20px;
   }
 

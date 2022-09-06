@@ -17,7 +17,7 @@
     <div id="container">
       <navbar>
         <img id="navbar-logo" src="./assets/circle.svg" />
-        <ul id="navbar-menu">
+        <ul id="navbar-menu" class="show">
           <li><a class="menuItem" href="./index.html">Home</a></li>
           <li><a class="menuItem" href="./project.html">Projects</a></li>
           <li><a class="menuItem" href="#services-section">Services</a></li>
@@ -25,10 +25,10 @@
         <button class="header-button">Contact Us</button>
         <img id="menu" src="assets/nav-menu.png" />
       </navbar>
-      <form action="#">
+      <form id="form">
         <h1 class="title">Contact Us</h1>
         <div class="input-container">
-          <label for="name">Full Name*</label>
+          <label for="name">Full Name *</label>
           <input
             type="name"
             id="name"
@@ -47,23 +47,28 @@
             />
           </div>
           <div class="input-container">
-            <label for="phone">Phone</label>
+            <label for="tel">Phone</label>
             <input
-              type="phone"
+              type="tel"
               id="phone"
               placeholder="Enter your phone number"
               required
             />
+            <span id="phone-error"></span>
           </div>
         </div>
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          cols="30"
-          rows="10"
-          placeholder="Write your message here..."
-          required
-        ></textarea>
+        <div class="input-container">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+          <span id="message-error"></span>
+        </div>
+
         <input type="submit" value="Submit" class="submit-btn" />
       </form>
       <footer>
