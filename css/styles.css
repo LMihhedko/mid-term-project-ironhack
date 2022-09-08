@@ -180,7 +180,6 @@ article p {
   margin: 0px 170px 150px;
   display: flex;
   justify-content: space-between;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
 
@@ -752,4 +751,83 @@ textarea {
   .middle-section {
     display: block;
   }
+}
+
+/*light-mode dark-mode*/
+#web-mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
+#web-mode img {
+  height: 25px;
+}
+
+/* The switch - the box around the slider */
+.mode-switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 51px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  top: 1px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #072ac8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+.dark {
+  background-color: #292e47;
+}
+
+body.dark .header-text .title,
+body.dark .card-text h2,
+body.dark .card-text p {
+  color: white;
+}
+
+body.dark navbar a,
+body.dark header h2,
+body.dark header .header-link,
+body.dark footer p {
+  color: #9fa4c3;
+}
+
+body.dark .section-card,
+body.dark #client-section {
+  background-color: #585c78;
+}
+
+body.dark #logos {
+  filter: grayscale(0%);
 }

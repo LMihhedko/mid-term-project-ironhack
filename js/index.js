@@ -9,6 +9,15 @@ window.addEventListener("load", function () {
     }
   };
 
+  // dark mode
+  let switchButton = document.querySelector(".mode-switch");
+  switchButton.addEventListener("click", changeMode);
+
+  function changeMode() {
+    let element = document.body;
+    element.classList.add("dark");
+  }
+
   const btns = document.querySelectorAll(".header-button");
   for (const btn of btns) {
     btn.addEventListener("click", function () {
