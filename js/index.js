@@ -1,4 +1,21 @@
 window.addEventListener("load", function () {
+  //listeners
+  //submit button form
+  const submitButton = document.querySelector(".submit-btn");
+  if (submitButton) {
+    submitButton.addEventListener("click", submitForm);
+  }
+
+  //navbar menu mobile
+  const menuButton = document.getElementById("menu");
+  menuButton.addEventListener("click", showHideNav);
+
+  const navMenu = document.querySelector(".show");
+
+  //dark-mode switch
+  let switchButton = document.querySelector(".mode-switch input");
+  switchButton.addEventListener("click", changeMode);
+
   window.onresize = function () {
     if (window.innerWidth < 576) {
       navMenu.classList.remove("show");
@@ -9,15 +26,6 @@ window.addEventListener("load", function () {
     }
   };
 
-  // dark mode
-  let switchButton = document.querySelector(".mode-switch");
-  switchButton.addEventListener("click", changeMode);
-
-  function changeMode() {
-    let element = document.body;
-    element.classList.add("dark");
-  }
-
   const btns = document.querySelectorAll(".header-button");
   for (const btn of btns) {
     btn.addEventListener("click", function () {
@@ -26,13 +34,12 @@ window.addEventListener("load", function () {
     });
   }
 
-  const menuButton = document.getElementById("menu");
-  menuButton.addEventListener("click", showHideNav);
+  // dark mode
 
-  const navMenu = document.querySelector(".show");
-
-  const submitButton = document.querySelector(".submit-btn");
-  submitButton.addEventListener("click", submitForm);
+  function changeMode() {
+    document.body.classList.toggle("dark");
+    console.log(document.body);
+  }
 
   function showHideNav() {
     console.log(navMenu);
