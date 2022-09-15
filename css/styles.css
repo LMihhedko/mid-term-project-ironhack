@@ -747,7 +747,7 @@ body.dark #logos {
   .header-text {
     width: 100%;
   }
-  .header-title {
+  .header-text .title span {
     font-size: 2.5rem;
     line-height: 45px;
   }
